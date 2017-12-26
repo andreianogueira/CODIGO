@@ -1,3 +1,4 @@
 Concatenação de variaveis (numeros e letras)
 importância das variáveis
 como fazer arredondamento no java script (Math.round(variavel))
+variaveis que recebem string
