@@ -27,6 +27,21 @@
 		var pontos = (vitorias * 3) + empates;
 
 		mostra("Os pontos do " + nome + " são: " + pontos);
+
+		//Se pontos maior que 28
+		if (pontos > 28){
+			mostra(nome + " está melhor do que o ano passado!");
+		}
+		
+		//Se pontos menor que 28
+		if (pontos < 28) {
+			mostra(nome + " está pior do que o ano passado!");
+		}
+		
+		//Se pontos igual a 28
+		if (pontos == 28) {
+			mostra(nome + " está igual ao ano passado!");	
+		}
 	</script>
 
 </body>
