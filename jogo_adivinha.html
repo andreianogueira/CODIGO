@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADIVINHA</title>
+
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<script type="text/javascript">
+		function pulaLinha(){
+			document.write("<br>");
+		}
+		
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha();
+		}
+
+		function sorteia(numeroAleatorio){
+			return Math.round(Math.random() * numeroAleatorio);
+		}
+
+		var numeroPensado = sorteia(10);
+		//var numeroPensado = Math.round(Math.randon()*10); 
+		var chute = parseInt(prompt("Digite seu chute:"));
+
+		if (chute==numeroPensado) {
+			mostra("Você acertou!");
+		}else{
+			if (chute > numeroPensado) {
+				mostra("Você errou! Seu chute é maior que o número pensado");
+			}else{
+				mostra("Você errou! Seu chute é menor que o número pensado");
+			}
+		}
+	</script>
+
+</body>
+</html>	

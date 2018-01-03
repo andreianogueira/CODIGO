@@ -28,6 +28,16 @@
 		var imcCalculado = calculaImc(pesoInformado, alturaInformada);
 
 		mostra(nome + ", seu IMC calculado é: " + imcCalculado);
+
+		if (imcCalculado < 18.5) {
+			mostra("Você está abaixo do peso!");
+		}
+		if ((18.5 <= imcCalculado) && (imcCalculado <= 35)) {
+			mostra ("Você está no peso ideal!");
+		} 
+		if (imcCalculado > 35){
+			mostra("Você está acima do peso!");
+		}
 	</script>
 
 </body>
