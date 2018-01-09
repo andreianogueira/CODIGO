@@ -24,16 +24,23 @@
 		var numeroPensado = sorteia(10);
 		//var numeroPensado = Math.round(Math.randon()*10); 
 		var chute = parseInt(prompt("Digite seu chute:"));
+		var tentativa = 1;
 
-		if (chute==numeroPensado) {
+		while(tentativa <= 3){
+			if (chute==numeroPensado) {
 			mostra("Você acertou!");
-		}else{
+			break;
+			}else{
 			if (chute > numeroPensado) {
 				mostra("Você errou! Seu chute é maior que o número pensado");
 			}else{
 				mostra("Você errou! Seu chute é menor que o número pensado");
 			}
+			}
+
+			tentativa++;SS
 		}
+		
 	</script>
 
 </body>
