@@ -8,6 +8,7 @@
 <body>
 
 	<script type="text/javascript">
+
 		function pulaLinha(){
 			document.write("<br>");
 		}
@@ -17,16 +18,19 @@
 			pulaLinha();
 		}
 
-/*		var multiplicador = 1;
+		var totalFamiliares = parseInt(prompt("Quantidade de familiares?"));
+		var numero = 1;
+		var totalIdade = 0;
 
-		while(multiplicador <= 10){
-			mostra(7*multiplicador);
-			multiplicador = multiplicador + 1;
-		}*/
-		for (var multiplicador = 1; multiplicador <= 10; multiplicador++){
-			mostra(7*multiplicador);
-			multiplicador = multiplicador + 1;
+		while (numero <= totalFamiliares){
+			
+			var idade = parseInt(prompt("Digite a idade do familiar " + numero));
+			totalIdade = totalIdade + idade;
+			numero++;
 		}
+		var mediaIdades = totalIdade/totalFamiliares;
+		mostra("A média das idades é " + mediaIdades);
+
 	</script>
 
 </body>
