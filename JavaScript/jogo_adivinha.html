@@ -24,8 +24,9 @@
 			return Math.round(Math.random() * numeroAleatorio);
 		}*/
 
-		var segredo = 5;
+		var segredo = Math.round(Math.randon()*10);
 		var input = document.querySelector("input");
+		input.focus();
 		
 		function verifica() {
 			if (input.value == segredo){
@@ -33,6 +34,9 @@
 			}else{
 				alert("Você errou");
 			}
+
+			input.value="";
+			input.focus();
 		}
 
 		var button = document.querySelector("button");
