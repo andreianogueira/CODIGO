@@ -24,23 +24,46 @@
 			return Math.round(Math.random() * numeroAleatorio);
 		}*/
 
-		var segredo = Math.round(Math.randon()*10);
+		function sorteia(){
+			return Math.round(Math.randon()*10);
+		}
+
+		function sorteiaNumeros(quantidade) {
+			var segredos = [];
+			var numero = 1;
+			while(numero<=quantidade){
+				segredos.push(sorteia());
+			}
+			return segredos;
+		}
+		var segredo = sorteiaNumeros();
+		segredo.push(sorteia());
+		//var segredo = Math.round(Math.randon()*10);
 		var input = document.querySelector("input");
 		input.focus();
 		
 		function verifica() {
-			if (input.value == segredo){
-				alert("Você acertou");
-			}else{
-				alert("Você errou");
-			}
+			var achou = false; 
 
-			input.value="";
-			input.focus();
-		}
+			for(var posicao = 0; posicao<segredo.length; posicao++){
+				if (input.value == segredo[posicao]){
+					alert("Você acertou");
+					achou = true;
+					break;
+				}else{
+					alert("Você errou");
+				}
+
+				input.value="";
+				input.focus();
+				}
+			}
+			
 
 		var button = document.querySelector("button");
 		button.onClick = verifica;
+
+
 		/*var numeroPensado = sorteia(10);
 		//var numeroPensado = Math.round(Math.randon()*10); 
 		var chute = parseInt(prompt("Digite seu chute:"));
